@@ -1,6 +1,6 @@
 # definir variáveis
 
-combustivel = 100
+combustivel = 110
 tripulantes = []
 
 ##Definir funções
@@ -16,7 +16,7 @@ def viajar():
 
 def abastecer():
     global combustivel
-    combustivel = 100
+    combustivel = 110
     print("Tanque cheio!⛽")
 
 def status_nave():
