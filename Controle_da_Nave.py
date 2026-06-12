@@ -8,7 +8,10 @@ tripulantes = []
 def viajar():
     # aqui vamos gastar combustível
     global combustivel
-    if(combustivel >=30):
+    if len(tripulantes) == 0:
+         print("A nave está sem tripulantes: Impossível iniciar a viagem")
+    
+    elif combustivel >=30:
         combustivel = combustivel - 30
         print("A nave viajou")
     else:
@@ -45,8 +48,8 @@ def removerTripulante():
 ### Criar um menu
 
 while True: ##esse loop roda para sempre
-    print("Bem-vindo ao menu interativo da nave. Por favor selecione uma opção")
-    print("\n 1- Mostrar status da nave | 2- Viajar | 3- Abastecer | 4- Novo Tripulante | 5- Sair | 6- Remover Tripulante")
+    print("\n----- Bem-vindo ao menu interativo da nave. Por favor selecione uma opção -----")
+    print("\n 1- Mostrar status da nave | 2- Viajar | 3- Abastecer | 4- Novo Tripulante | 5- Remover Tripulante | 6- Sair\n")
     opcao = input("Escolha:")
 
     if (opcao == "1"):
@@ -54,17 +57,21 @@ while True: ##esse loop roda para sempre
 
     elif (opcao == "2"):
         viajar()
+
     elif (opcao == "3"):
         abastecer()
+
     elif (opcao == "4"):
         registrarTripulante()
 
     elif (opcao == "5"):
+        removerTripulante()
+
+    elif (opcao == "6"):
         print("Viagem encerrada!")
         break
 
-    elif (opcao == "6"):
-        removerTripulante()
+  
 
 
 
